@@ -1,6 +1,7 @@
 version: '3'
 services:
   mariadb:
+    container_name: db
     image: mariadb
     restart: always
     ports:
@@ -14,6 +15,7 @@ services:
       - ./db-data:/var/lib/mysql
 
   wordpress:
+    container_name: meublog
     image: wordpress
     restart: always
     ports:
